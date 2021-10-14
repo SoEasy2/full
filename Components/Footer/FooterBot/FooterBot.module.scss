@@ -1,0 +1,14 @@
+.bot{display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+.botItems{
+  display: flex;
+  .link{
+    color:#000;
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.containerImg{
+  width: 250px;
+  height: 350px;
+  transition: all .5s;
+  cursor: pointer;
+  border-radius: 7px;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.img{
+  width: 100%;
+  object-fit: cover;
+}

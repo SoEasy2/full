@@ -1,0 +1,23 @@
+.logo {
+  padding-top:60px;
+}
+.logoLink {
+  color: #4fbde8;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 5px;
+  position: relative;
+
+  &:before {
+    height: 4px;
+    border-radius: 40px;
+    width: 80px;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: #ff6380;
+    bottom: 0;
+    right: 0;
+  }
+}

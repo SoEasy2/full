@@ -1,0 +1,27 @@
+.form{
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-around;
+}
+.btnFind{
+  border: none;
+  background-color: #FF385C;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  position: relative;
+  &:before{
+    content:"";
+    position: absolute;
+    top:15px;
+    left: 15px;
+    z-index: 1;
+    background-image: url('../../../public/search-icon.png');
+    width: 30px;
+    height: 26px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

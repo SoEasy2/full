@@ -1,0 +1,43 @@
+.header{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  .logo {
+    font-weight: 700;
+    font-size: 28px;
+
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+
+    &:before {
+      width: 70px;
+      height: 2px;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #fff;
+    }
+  }
+    .container{
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 30px 15px;
+    }
+
+    .menu_items{
+      display: flex;
+    }
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    .right{
+      display: flex;
+      align-items: center;
+    }
+
+  }
+
