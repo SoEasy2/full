@@ -1,0 +1,159 @@
+.modal{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top:0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.closeBtn{
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+.title{
+  font-size: 32px;
+  font-weight: 700;
+  padding-top: 25px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.modal__content{
+  width: 40%;
+  height: 88%;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.modal__container{
+  max-width: 490px;
+  margin: 0 auto;
+}
+.close{ padding-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+.select{
+  background-color: #f3f3f3;
+  width: 489px;
+  height: 60px;
+  font-size: 20px;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+}
+.inputLoc{
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f3f3f3;
+  width: 489px;
+  height: 60px;
+  font-size: 20px;
+  position: relative;
+}
+.passRec{
+  color:#8578f8;
+  border: none;
+  background-color: #fff;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.continue{
+  width: 489px;
+  height: 60px;
+  color:#fff;
+  background-color:#FF385C;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin:10px 0;
+}
+.btnGoogle{
+  margin: 10px 0;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 489px;
+  height: 60px;
+  color:#8f8da4;
+  background-color: #fff;
+  position: relative;
+  &:before{
+    width: 30px;
+    height: 30px;
+    content:"";
+    position: absolute;
+    top:15px;
+    left: 10px;
+    background-image: url(../../public/google-icon.png);
+    background-size: cover;
+  }
+}
+.btnFacebook{
+  margin: 10px 0;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 489px;
+  height: 60px;
+  color:#8f8da4;
+  position: relative;
+  &:before{
+    width: 30px;
+    height: 30px;
+    content:"";
+    position: absolute;
+    top:15px;
+    left: 10px;
+    background-image: url(../../public/facebook-icon.png);
+    background-size: cover;
+  }
+}
+.btnApple{
+  margin: 10px 0;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 489px;
+  height: 60px;
+  color:#8f8da4;
+  position: relative;
+  &:before{
+    width: 30px;
+    height: 30px;
+    content:"";
+    position: absolute;
+    top:15px;
+    left: 10px;
+    background-image: url(../../public/apple-icon.png);
+    background-size: cover;
+  }
+}
+.label{
+  margin-top: 15px;
+  color:#747474;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,87 @@
+.card{
+  border:2px solid #eaeaea;
+  border-right: none;
+  display: flex;
+  width: 44vw;
+  padding: 15px 0;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+.cardLeft{
+  border-radius: 10px;
+  width: 220px;
+  height: 170px;
+  background-image: url("../../../public/card-img.jpg");
+  background-size: cover;
+  position: relative;
+  &:before{
+    box-sizing: border-box;
+    position: absolute;
+    content:"Top Rated";
+    background-color: #ff7083;
+    color:#fff;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 5px 10px;
+    top:15px;
+    left:15px;
+  }
+}
+.cardCenter{
+  padding-top: 15px;
+}
+.cardText{
+  color:#aaaaaa;
+}
+.cardName{
+  color:#4e4d54;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.cardRate{
+  margin-top: 45px;
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+  span{
+    color:#b1b1b1;
+  }
+  &:before{
+    position: absolute;
+    content:"";
+    width: 17px;
+    height: 17px;
+    top:-1;
+    left:0;
+    background-image: url(../../../public/star.png);
+    background-size: cover;
+  }
+}
+.cardInfo{
+  color:#ababab;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 15px;
+}
+.cardAvailable{
+  color:#29b94a;
+  line-height: 18px;
+  font-size: 14px;
+}
+.cardRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-favorite{
+
+}
+.img{
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+}
+.cardPrice{
+  font-size: 18px;
+  font-weight: bold;
+}

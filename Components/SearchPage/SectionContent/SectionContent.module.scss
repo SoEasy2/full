@@ -1,0 +1,20 @@
+.section{
+  background-color: #fbfbfb;
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  .title{
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 36px;
+    color:#292831;
+  }
+  .text{
+    color:#727177;
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 30px;
+  }
+}

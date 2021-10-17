@@ -1,0 +1,17 @@
+.btns{
+  padding: 15px 0;
+  display: flex;
+
+}
+.list{
+  position: absolute;
+  margin-left: -650px;
+  transition: all 1s;
+}
+
+.active{
+  margin-left: 0;
+  position: inherit;
+
+}
+
