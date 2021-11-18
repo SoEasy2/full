@@ -3,12 +3,15 @@ import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
 import ButtonFind from "../ButtonFind/ButtonFind";
 import classes from './Header.module.scss'
 import HeaderLink from "../HeaderLink/HeaderLink";
+import { IRootReducer } from '../../../../redux/user/reducer/state';
+import { useSelector } from 'react-redux';
 
 interface IHeaderProps{
     stateModal():void;
 }
 
 const Header:React.FC<IHeaderProps> = ({stateModal}) => {
+    const user = useSelector((state:IRootReducer) => state.user)
     return (
         <header className={classes.header}>
             <div className={classes.container}>
@@ -26,7 +29,7 @@ const Header:React.FC<IHeaderProps> = ({stateModal}) => {
                             </ul>
                         </nav>
                             <ButtonFind>Find Nearby</ButtonFind>
-                            <ButtonSignIn stateModal={stateModal}>Sign In</ButtonSignIn>
+                        {!user ? <ButtonSignIn stateModal={stateModal}>Sign In</ButtonSignIn> :null}
                     </div>
                 </div>
             </div>

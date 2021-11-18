@@ -10,7 +10,14 @@
   justify-content: center;
   z-index: 2;
 }
-
+.signIn{
+  display: none;
+}
+.titleSingUp{
+  padding-top: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
 .closeBtn{
   cursor: pointer;
   background-color: #fff;
@@ -19,13 +26,25 @@
   font-weight: bold;
 }
 .title{
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 700;
-  padding-top: 25px;
+  padding-top: 85px;
 }
 .form{
   display: flex;
   flex-direction: column;
+}
+.formContent{
+  display: none;
+}
+.error{
+  font-weight: 700;
+  color:red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.activeForm{
+  display: block;
 }
 .wrapper{
   display: flex;
@@ -43,10 +62,49 @@
   max-width: 490px;
   margin: 0 auto;
 }
-.close{ padding-top: 5px;
+.close{ padding-top: 20px;
   display: flex;
   justify-content: flex-end;
+  margin-right: 25px;
 }
+.tabs{
+  display: flex;
+  justify-content: space-between;
+}
+.tabSignUp{
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 0px;
+  align-items: center;
+  text-align: center;
+  background-color: #fcfcfc;
+  width: 50%;
+  cursor: pointer;
+  transition: all .5s;
+  &:hover{
+    background-color: #f3f3f3;
+  }
+}
+.tabSignIn{
+  background-color: #fcfcfc;
+  transition: all .3s;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 0px;
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  &:hover{
+    background-color: #f3f3f3;
+  }
+}
+.activeTabs{
+  background-color: #f3f3f3;
+}
+
 .select{
   background-color: #f3f3f3;
   width: 489px;
@@ -62,7 +120,7 @@
   outline: none;
   background-color: #f3f3f3;
   width: 489px;
-  height: 60px;
+  height: 53px;
   font-size: 20px;
   position: relative;
 }
