@@ -19,7 +19,6 @@ export class AuthController {
         response.cookie('refresh_token', userData.tokens.refreshToken, {maxAge:30*24*60*60*1000, httpOnly:true})
         return userData
     }
-
     @Post("/logout")
     async logout(@Req() request:Request,
                  @Res() response:Response){

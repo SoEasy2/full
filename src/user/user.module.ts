@@ -7,9 +7,12 @@ import {User} from "../entities/user.entity";
 import {CommentEntity} from "../entities/comment.entity";
 import {AuthModule} from "../auth/auth.module";
 import {ConfirmModule} from "../confirm/confirm.module";
+import { FavouriteAppartamentsEntity } from 'src/entities/favouriteAppartaments.entity';
+import { ItemsSchema } from 'src/map/pinktada.schema';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-    imports:[TypeOrmModule.forFeature([User, CommentEntity]), forwardRef(()=>AuthModule)],
+    imports:[MongooseModule.forFeature([{name:'items', schema:ItemsSchema}]),TypeOrmModule.forFeature([User, CommentEntity, FavouriteAppartamentsEntity]), forwardRef(()=>AuthModule)],
     providers: [UserService],
     controllers: [UserController],
     exports:[

@@ -11,6 +11,7 @@ import {Repository} from "typeorm";
 import {ForgottenPasswordEntityEntity} from "../entities/ForgottenPasswordEntity.entity";
 import {ResetPasswordDto} from "../dto/reset-password.dto";
 import {UserTokenDto} from "../dto/user-token.dto"
+import { FavouriteAppartamentsEntity } from 'src/entities/favouriteAppartaments.entity';
 
 @Injectable()
 export class AuthService {
@@ -21,7 +22,8 @@ export class AuthService {
                 private userService:UserService,
                 private jwtService:JwtService,
                 private mailService:MailService,
-                private confirmService:ConfirmService) {
+                private confirmService:ConfirmService,
+                @InjectRepository(FavouriteAppartamentsEntity) private favourite:Repository<FavouriteAppartamentsEntity>) {
     }
     async login(userDto:CreateUserDto){
         const userFromDb = await this.userRepository.findOne({where:{email:userDto.email}})
@@ -36,6 +38,7 @@ export class AuthService {
             return {tokens, user:userDtoTokens}
         } throw new HttpException('LOGIN.USER_NOT_CORRECT', HttpStatus.BAD_REQUEST)
     }
+
     async registration(userDto:CreateUserDto){
         const candidate = await this.userService.getUserByEmail(userDto.email);
         if (candidate){
@@ -71,7 +74,6 @@ export class AuthService {
         }
 
     }
-    async
     async createForgottenPassword(email:string){
         const user = await this.userRepository.findOne({where:{email:email}})
         console.log('tuta')

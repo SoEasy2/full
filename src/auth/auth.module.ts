@@ -10,12 +10,13 @@ import {TypeOrmModule} from "@nestjs/typeorm";
 import {User} from "../entities/user.entity";
 import {JwtService} from "./jwt.service";
 import {ForgottenPasswordEntityEntity} from "../entities/ForgottenPasswordEntity.entity";
+import { FavouriteAppartamentsEntity } from 'src/entities/favouriteAppartaments.entity';
 
 
 @Module({
   controllers: [AuthController],
   providers: [AuthService, JwtService],
-  imports:[forwardRef(()=>UserModule), TypeOrmModule.forFeature([User, ForgottenPasswordEntityEntity]),
+  imports:[forwardRef(()=>UserModule), TypeOrmModule.forFeature([User, ForgottenPasswordEntityEntity, FavouriteAppartamentsEntity]),
       MailModule,
     ConfirmModule, JwtModule.register({
     secret:Config.jwt.secretOrKey || 'SECRET',

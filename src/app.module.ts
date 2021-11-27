@@ -9,7 +9,13 @@ import { MailModule } from './mail/mail.module';
 import {Confirm} from "./entities/confirm.entity";
 import { ConfirmModule } from './confirm/confirm.module';
 import {ForgottenPasswordEntityEntity} from "./entities/ForgottenPasswordEntity.entity";
+import { MongooseModule } from "@nestjs/mongoose";
+import { MapModule } from './map/map.module';
+import { CheckoutModule } from './checkout/checkout.module';
 
+import Config from './config/config'
+import { FavouriteAppartamentsEntity } from "./entities/favouriteAppartaments.entity";
+import { BookApartamentsEntity } from "./entities/BookApartaments.entity";
 
 @Module({
     imports:[TypeOrmModule.forRoot({
@@ -19,8 +25,11 @@ import {ForgottenPasswordEntityEntity} from "./entities/ForgottenPasswordEntity.
         username: 'postgres',
         password: 'root',
         database: 'pinktada',
-        entities: [User, CommentEntity, Confirm, ForgottenPasswordEntityEntity],
+        entities: [User, CommentEntity, Confirm, ForgottenPasswordEntityEntity, FavouriteAppartamentsEntity],
         synchronize: true,
-    }), UserModule, CommentModule, AuthModule, MailModule, ConfirmModule]
+    }), UserModule, CommentModule, AuthModule, MailModule, ConfirmModule, BookApartamentsEntity,
+    MongooseModule.forRoot('mongodb://localhost:27017/pinktada'),
+    MapModule,
+    CheckoutModule]
 })
 export class AppModule{}

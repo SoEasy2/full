@@ -1,7 +1,9 @@
+
 export class UserTokenDto{
     email:string;
     id:number;
     valid:boolean;
+
 
     constructor(user) {
         this.email = user.email;

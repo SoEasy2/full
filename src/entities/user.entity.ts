@@ -1,8 +1,10 @@
-import {Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, JoinColumn, JoinTable, ManyToMany, OneToMany, OneToOne, PrimaryGeneratedColumn} from "typeorm";
 import {CommentEntity} from "./comment.entity";
 import {ApiProperty} from "@nestjs/swagger";
 import {Confirm} from "./confirm.entity";
 import {ForgottenPasswordEntityEntity} from "./ForgottenPasswordEntity.entity";
+import { FavouriteAppartamentsEntity } from "./favouriteAppartaments.entity";
+import { BookApartamentsEntity } from "./BookApartaments.entity";
 
 @Entity()
 export class User {
@@ -33,4 +35,11 @@ export class User {
     forgottenPassword:ForgottenPasswordEntityEntity;
     @OneToMany(type => CommentEntity, comment => comment.user)
     comments: CommentEntity[];
+
+
+    @OneToMany(type => FavouriteAppartamentsEntity,favouriteAppartament => favouriteAppartament.user)
+    favouriteAppartament:FavouriteAppartamentsEntity[]
+
+    @OneToMany(type =>  BookApartamentsEntity,  bookApartaments=> bookApartaments.user)
+    bookApartaments: BookApartamentsEntity[]
 }
