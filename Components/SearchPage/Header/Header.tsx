@@ -4,14 +4,17 @@ import classes from "./Header.module.scss"
 import SearchForm from "../SearchForm/SearchForm";
 import Profile from "../Profile/Profile";
 import Container from "../../Container/Container";
-const Header:React.FC = () => {
+interface IProps{
+    setFavourite(obj:Boolean):void
+}
+const Header:React.FC<IProps> = ({setFavourite}) => {
     return (
         <header className={classes.header}>
             <Container>
                 <div className={classes.wrapper}>
                     <Logo/>
                     <SearchForm/>
-                    <Profile/>
+                    <Profile setFavourite={setFavourite}/>
                 </div>
             </Container>
         </header>

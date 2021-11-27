@@ -1,0 +1,72 @@
+.advantages{
+  list-style: none;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+.bookmark{
+  position: relative;
+  &:before{
+    content:'';
+    position: absolute;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../public/bookmark.png');
+    top:20px;
+    left: 0;
+    background-size: cover;
+  }
+}
+.home{
+  position: relative;
+  &:before{
+    content:'';
+    position: absolute;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../public/home.png');
+    top:20px;
+    left: 0;
+    background-size: cover;
+  }
+}
+.business{
+  position: relative;
+  &:before{
+    content:'';
+    position: absolute;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../public/business.png');
+    top:20px;
+    left: 0;
+    background-size: cover;
+  }
+}
+.cup{
+  position: relative;
+  &:before{
+    content:'';
+    position: absolute;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../public/cup.png');
+    top:20px;
+    left: 0;
+    background-size: cover;
+  }
+}
+.advantagesText{
+  font-size: 18px;
+  line-height: 26px;
+}
+.spanYes{
+  color:#7fff00;
+}
+.spanNo{
+  color:red;
+}
+.mainAdvantages{}

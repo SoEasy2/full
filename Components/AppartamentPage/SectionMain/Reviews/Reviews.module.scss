@@ -1,0 +1,17 @@
+.reviews{
+  padding-left: 21px;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top:-3px;
+    left: 0;
+    background-image: url('../../../../public/star.png');
+    background-size: cover;
+  }
+}
+.span{
+  color:#bdbebd;
+}

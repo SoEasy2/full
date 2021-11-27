@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { connect, useSelector } from 'react-redux';
 import { Dispatch } from 'redux';
@@ -13,10 +13,11 @@ const Search:React.FC<ILoginContainerProps> = ({checkUser}) => {
     useEffect(()=>{
         checkUser()
     }, [])
+    const [isFavorite, setFavourite] = useState<Boolean>(false)
     return (
         <React.Fragment>
-            <Header/>
-            <SectionContent/>
+            <Header setFavourite={setFavourite} />
+            <SectionContent setFavorite={setFavourite} isFavorite={isFavorite}/>
         </React.Fragment>
     );
 };

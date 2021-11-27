@@ -4,7 +4,6 @@ import classes from "./ModalSign.module.scss"
 import {schemaSignIn, schemaSignUp} from '../../yup/schemaSignIn'
 import {useDispatch, useSelector } from 'react-redux';
 import { ILoginArguments } from '../../redux/user/types/handlers/ILoginArguments';
-import { IRootReducer } from '../../redux/user/reducer/state';
 import { Dispatch } from 'redux';
 import { ILogin } from '../../redux/user/types/auth';
 import { AuthActions } from '../../redux/user/actions';
@@ -12,6 +11,7 @@ import {useRouter} from 'next/router'
 import { useCookies } from 'react-cookie';
 
 import ReactSession from 'react-client-session';
+import { IRootReducer } from '../../redux/rootReducer/state';
 interface IModalSignProps{
     stateModal():void;
     signIn(values:ILogin):void;
@@ -44,7 +44,7 @@ const ModalSign:React.FC<IModalSignProps> = ({stateModal, signIn, signUp}) => {
                 <div className={classes.close}><button className={classes.closeBtn} onClick={stateModal}>X</button></div>
                 <div className={classes.modal__container}>
                     <div className={classes.tabs}>
-                        <div className={isTabSignIn ? `${classes.tabSignIn} ${classes.activeTabs}` :`${classes.tabSignIn}`} onClick={()=>setTabSignIn(true)}>SignIn</div>
+                        <div  className={isTabSignIn ? `${classes.tabSignIn} ${classes.activeTabs}` :`${classes.tabSignIn}`} onClick={()=>setTabSignIn(true)}>SignIn</div>
                         <div className={isTabSignIn ? `${classes.tabSignUp}` :`${classes.tabSignUp} ${classes.activeTabs}`} onClick={()=>setTabSignIn(false)}>SignUp</div>
                     </div>
                           <div className={classes.wrapper}>

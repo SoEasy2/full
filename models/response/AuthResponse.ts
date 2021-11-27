@@ -1,7 +1,7 @@
-import { IToken } from "../../redux/types/types";
+
 import {ITokens, IUser } from "../IUser";
 
 export interface AuthResponse{
-    tokens:IToken;
+    tokens:ITokens;
     user:IUser;
 }

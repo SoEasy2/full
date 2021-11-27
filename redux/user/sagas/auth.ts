@@ -23,7 +23,7 @@ function* SignInWorker(action:Action<ILogin>) {
     }
 }
 function* FormWorker(action:Action<IForm>){
-
+0
     try{
         const obj = {...action.payload}
         yield FormActions.setForm(obj)
@@ -54,6 +54,14 @@ function* CheckUserWorker(){
     }
 }
 
+function* UserFavouriteWorker(action:Action<IUser>){
+    try{
+        yield (UserActions.setUserFavourite(action.payload))
+    }catch (e) {
+
+    }
+}
+
 function* SignUpWorker(action:Action<ISignUp>){
     try{
         const {data} = yield call(signUp, action.payload)
@@ -69,4 +77,5 @@ export default function* watchAuth(){
     yield takeLatest(AuthActions.Type.CHECK_USER, CheckUserWorker)
     yield takeLatest(FormActions.Type.SET_FORM, FormWorker)
     yield takeLatest(AuthActions.Type.LOGOUT, LogoutUserWorker)
+    yield takeLatest(UserActions.Type.SET_USER_FAVOURITE,UserFavouriteWorker)
 }

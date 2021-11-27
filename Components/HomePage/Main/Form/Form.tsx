@@ -8,6 +8,7 @@ import { Dispatch } from 'redux';
 import { connect, useSelector } from 'react-redux';
 import { FormActions } from '../../../../redux/searchForm/actions';
 import { IRootReducer } from '../../../../redux/rootReducer/state';
+import InputLocation from '../InputLocation/InputLocation';
 type IFormContainerProps = ReturnType<typeof mapDispatchToProps>
 const Form:React.FC<IFormContainerProps> = ({formAction}) => {
     const redirect = (event) =>{
@@ -24,9 +25,12 @@ const Form:React.FC<IFormContainerProps> = ({formAction}) => {
     const changeInputHandler = (event) =>{
         inSetForm(prev=>({...prev, ...{[event.target.name]:event.target.value}}))
     }
+    const inputSearch = (event) =>{
+
+    }
     return (<>
         <form className={classes.form} onSubmit={(event)=>redirect(event)}>
-            <Input changeInputHandler={changeInputHandler} name={'location'} type={"text"} value={form.location} placeholder={"Enter location"}>Location</Input>
+           <InputLocation/>
             <Input changeInputHandler={changeInputHandler} name={'startDate'} value={form.startDate} type={"date"}>Start Date</Input>
             <Input changeInputHandler={changeInputHandler} name={'endDate'} value={form.endDate} type={"date"}>End Date</Input>
             <SelectComponent setForm={inSetForm}/>
