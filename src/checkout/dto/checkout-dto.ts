@@ -4,5 +4,9 @@ export interface ICheckoutDto{
     idAppartament:string,
     amount:number,
     description:string,
-    currency:string
+    currency:string,
+    endDate:string,
+    startDate:string,
+    city:string,
+    hotel:string
 }

@@ -7,10 +7,13 @@ import {MailModule} from "../mail/mail.module";
 import {ConfirmModule} from "../confirm/confirm.module";
 import Config from "../config/config"
 import {TypeOrmModule} from "@nestjs/typeorm";
-import {User} from "../entities/user.entity";
+
 import {JwtService} from "./jwt.service";
-import {ForgottenPasswordEntityEntity} from "../entities/ForgottenPasswordEntity.entity";
-import { FavouriteAppartamentsEntity } from 'src/entities/favouriteAppartaments.entity';
+import { User } from 'src/user/entity/user.entity';
+import { ForgottenPasswordEntityEntity } from 'src/user/entity/ForgottenPasswordEntity.entity';
+import { FavouriteAppartamentsEntity } from '../fauvorite-apartament/entity/fauvorite-apartament-entity.entity';
+
+
 
 
 @Module({

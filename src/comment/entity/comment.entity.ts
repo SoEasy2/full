@@ -1,5 +1,6 @@
+import { User } from "src/user/entity/user.entity";
 import {Column, Entity, JoinColumn, ManyToOne, OneToMany} from "typeorm";
-import {User} from "./user.entity";
+
 
 @Entity()
 export class CommentEntity{

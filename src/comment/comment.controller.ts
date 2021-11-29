@@ -1,6 +1,6 @@
 import {Body, Controller, Get, Param, Post} from '@nestjs/common';
 import {CommentService} from "./comment.service";
-import {createCommentDto} from "../dto/create-comment.dto";
+import { createCommentDto } from './dto/create-comment.dto';
 
 @Controller('api/comment')
 export class CommentController {

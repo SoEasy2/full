@@ -1,8 +1,10 @@
 import {HttpException, HttpStatus, Injectable} from '@nestjs/common';
-import {User} from "../entities/user.entity";
+
 import {InjectRepository} from "@nestjs/typeorm";
-import {Confirm} from "../entities/confirm.entity";
+import { User } from 'src/user/entity/user.entity';
+
 import {Repository} from "typeorm";
+import { Confirm } from './entity/confirm.entity';
 
 @Injectable()
 export class ConfirmService {

@@ -3,16 +3,18 @@ import {forwardRef, Module} from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserController } from './user.controller';
 import {TypeOrmModule} from "@nestjs/typeorm";
-import {User} from "../entities/user.entity";
-import {CommentEntity} from "../entities/comment.entity";
 import {AuthModule} from "../auth/auth.module";
 import {ConfirmModule} from "../confirm/confirm.module";
-import { FavouriteAppartamentsEntity } from 'src/entities/favouriteAppartaments.entity';
-import { ItemsSchema } from 'src/map/pinktada.schema';
+
 import { MongooseModule } from '@nestjs/mongoose';
+import { ItemsSchema } from 'src/map/etity/pinktada.schema';
+import { User } from './entity/user.entity';
+import { CommentEntity } from 'src/comment/entity/comment.entity';
+import { FavouriteAppartamentsEntity } from '../fauvorite-apartament/entity/fauvorite-apartament-entity.entity';
+
 
 @Module({
-    imports:[MongooseModule.forFeature([{name:'items', schema:ItemsSchema}]),TypeOrmModule.forFeature([User, CommentEntity, FavouriteAppartamentsEntity]), forwardRef(()=>AuthModule)],
+    imports:[MongooseModule.forFeature([{name:'items', schema:ItemsSchema}]),TypeOrmModule.forFeature([User, CommentEntity]), forwardRef(()=>AuthModule)],
     providers: [UserService],
     controllers: [UserController],
     exports:[

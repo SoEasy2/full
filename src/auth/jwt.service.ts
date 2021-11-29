@@ -1,10 +1,10 @@
 import {HttpException, HttpStatus, Injectable} from "@nestjs/common";
-import {User} from "../entities/user.entity";
 import {InjectRepository} from "@nestjs/typeorm";
 import {Repository} from "typeorm";
 import Config from "../config/config"
-import {UserTokenDto} from "../dto/user-token.dto"
 import * as jwt from "jsonwebtoken"
+import { UserTokenDto } from "src/user/dto/user-token.dto";
+import { User } from "src/user/entity/user.entity";
 
 @Injectable()
 export class JwtService{

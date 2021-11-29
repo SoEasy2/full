@@ -1,10 +1,13 @@
 import {Column, Entity, JoinColumn, JoinTable, ManyToMany, OneToMany, OneToOne, PrimaryGeneratedColumn} from "typeorm";
-import {CommentEntity} from "./comment.entity";
+
 import {ApiProperty} from "@nestjs/swagger";
-import {Confirm} from "./confirm.entity";
+
 import {ForgottenPasswordEntityEntity} from "./ForgottenPasswordEntity.entity";
-import { FavouriteAppartamentsEntity } from "./favouriteAppartaments.entity";
-import { BookApartamentsEntity } from "./BookApartaments.entity";
+
+import { Confirm } from "src/confirm/entity/confirm.entity";
+import { CommentEntity } from "src/comment/entity/comment.entity";
+import { FavouriteAppartamentsEntity } from "../../fauvorite-apartament/entity/fauvorite-apartament-entity.entity";
+import { BookApartamentsEntity } from "../../book-apartament/entity/BookApartaments.entity";
 
 @Entity()
 export class User {

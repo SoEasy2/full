@@ -1,11 +1,12 @@
 import {Body, Controller, Get, HttpException, HttpStatus, Param, Post, Redirect} from '@nestjs/common';
-import {CreateUserDto} from "../dto/create-user.dto";
 import {AuthService} from "./auth.service";
 import {ConfirmService} from "../confirm/confirm.service";
-import {ResetPasswordDto} from "../dto/reset-password.dto";
 import {Response, Request} from 'express'
 import { Res } from '@nestjs/common';
 import { Req } from '@nestjs/common';
+import { CreateUserDto } from 'src/user/dto/create-user.dto';
+import { ResetPasswordDto } from 'src/user/dto/reset-password.dto';
+
 
 @Controller('api/auth')
 export class AuthController {

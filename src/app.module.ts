@@ -1,21 +1,29 @@
 import {Module} from "@nestjs/common";
 import {TypeOrmModule} from "@nestjs/typeorm";
 import { UserModule } from './user/user.module';
-import {User} from "./entities/user.entity";
+
 import { CommentModule } from './comment/comment.module';
-import {CommentEntity} from "./entities/comment.entity";
+
 import { AuthModule } from './auth/auth.module';
 import { MailModule } from './mail/mail.module';
-import {Confirm} from "./entities/confirm.entity";
+
 import { ConfirmModule } from './confirm/confirm.module';
-import {ForgottenPasswordEntityEntity} from "./entities/ForgottenPasswordEntity.entity";
+
 import { MongooseModule } from "@nestjs/mongoose";
 import { MapModule } from './map/map.module';
 import { CheckoutModule } from './checkout/checkout.module';
 
 import Config from './config/config'
-import { FavouriteAppartamentsEntity } from "./entities/favouriteAppartaments.entity";
-import { BookApartamentsEntity } from "./entities/BookApartaments.entity";
+import { CommentEntity } from "./comment/entity/comment.entity";
+import { User } from "./user/entity/user.entity";
+import { ForgottenPasswordEntityEntity } from "./user/entity/ForgottenPasswordEntity.entity";
+
+import { Confirm } from "./confirm/entity/confirm.entity";
+import { FauvoriteApartamentModule } from './fauvorite-apartament/fauvorite-apartament.module';
+import { FavouriteAppartamentsEntity } from "./fauvorite-apartament/entity/fauvorite-apartament-entity.entity";
+import { BookApartamentModule } from './book-apartament/book-apartament.module';
+import { BookApartamentsEntity } from "./book-apartament/entity/BookApartaments.entity";
+
 
 @Module({
     imports:[TypeOrmModule.forRoot({
@@ -25,11 +33,13 @@ import { BookApartamentsEntity } from "./entities/BookApartaments.entity";
         username: 'postgres',
         password: 'root',
         database: 'pinktada',
-        entities: [User, CommentEntity, Confirm, ForgottenPasswordEntityEntity, FavouriteAppartamentsEntity],
+        entities: [User, CommentEntity, Confirm, ForgottenPasswordEntityEntity,BookApartamentsEntity, FavouriteAppartamentsEntity],
         synchronize: true,
-    }), UserModule, CommentModule, AuthModule, MailModule, ConfirmModule, BookApartamentsEntity,
+    }), UserModule, CommentModule, AuthModule, MailModule, ConfirmModule,
     MongooseModule.forRoot('mongodb://localhost:27017/pinktada'),
     MapModule,
-    CheckoutModule]
+    CheckoutModule,
+    FauvoriteApartamentModule,
+    BookApartamentModule]
 })
 export class AppModule{}

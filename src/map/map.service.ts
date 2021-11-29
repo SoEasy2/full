@@ -4,7 +4,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Connection, Model, Schema } from 'mongoose';
 import { Repository } from 'typeorm';
 import { ICord } from './dto/coord-dto';
-import {items } from './pinktada.schema';
+import { items } from './etity/pinktada.schema';
+
 
 @Injectable()
 export class MapService {

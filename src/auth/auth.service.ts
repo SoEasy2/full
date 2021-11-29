@@ -1,17 +1,19 @@
 import {Body, HttpException, HttpStatus, Injectable, Post, UnauthorizedException} from '@nestjs/common';
-import {CreateUserDto} from "../dto/create-user.dto";
 import {UserService} from "../user/user.service";
 import {JwtService} from "./jwt.service";
 import * as bcrypt from "bcryptjs"
-import {User} from "../entities/user.entity";
+
 import {MailService} from "../mail/mail.service";
 import {ConfirmService} from "../confirm/confirm.service";
 import {InjectRepository} from "@nestjs/typeorm";
 import {Repository} from "typeorm";
-import {ForgottenPasswordEntityEntity} from "../entities/ForgottenPasswordEntity.entity";
-import {ResetPasswordDto} from "../dto/reset-password.dto";
-import {UserTokenDto} from "../dto/user-token.dto"
-import { FavouriteAppartamentsEntity } from 'src/entities/favouriteAppartaments.entity';
+
+import { CreateUserDto } from 'src/user/dto/create-user.dto';
+import { UserTokenDto } from 'src/user/dto/user-token.dto';
+import { ResetPasswordDto } from 'src/user/dto/reset-password.dto';
+import { User } from 'src/user/entity/user.entity';
+import { ForgottenPasswordEntityEntity } from 'src/user/entity/ForgottenPasswordEntity.entity';
+import { FavouriteAppartamentsEntity } from '../fauvorite-apartament/entity/fauvorite-apartament-entity.entity';
 
 @Injectable()
 export class AuthService {

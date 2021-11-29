@@ -1,6 +1,7 @@
+import { User } from "src/user/entity/user.entity";
 import {Column, ManyToMany, ManyToOne, PrimaryColumn } from "typeorm";
 import { Entity } from "typeorm/decorator/entity/Entity";
-import { User } from "./user.entity";
+
 
 @Entity()
 export class FavouriteAppartamentsEntity {
@@ -11,11 +12,6 @@ export class FavouriteAppartamentsEntity {
     user:User;
 
     @Column({type:'varchar', nullable:false})
-    appartament:string;
-
-
+    apartament:string;
 }
 
-function OneToMany(arg0: () => any, arg1: (user: any) => any) {
-    throw new Error("Function not implemented.");
-}
