@@ -13,9 +13,17 @@ export const payment = (data:IPayment) =>{
         data
     })
 }
+export const bookApartament = (email:string) =>{
+    return axios({
+        url:`${Config.BASE_URL}/api/book-apartament/${email}`,method:'GET',
+        headers:{
+            'Content-Type':ContentTypes.APPLICATION_JSON
+        },
+    })
+}
 export const favourite = (data:IFavourite):Promise<AxiosResponse<Array<Object>>> =>{
     return axios({
-        url:`${Config.BASE_URL}/api/user/check`,
+        url:`${Config.BASE_URL}/api/fauvorite-apartament/check`,
         method:'POST',
         headers:{
             'Content-Type':ContentTypes.APPLICATION_JSON
@@ -25,7 +33,7 @@ export const favourite = (data:IFavourite):Promise<AxiosResponse<Array<Object>>>
 }
 export const checkFavourite = (email:string) =>{
     return axios({
-        url:`${Config.BASE_URL}/api/user/fauvorite/${email}`,
+        url:`${Config.BASE_URL}/api/fauvorite-apartament/${email}`,
         method:'GET',
         headers:{
             'Content-Type':ContentTypes.APPLICATION_JSON

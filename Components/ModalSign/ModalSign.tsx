@@ -31,11 +31,13 @@ const ModalSign:React.FC<IModalSignProps> = ({stateModal, signIn, signUp}) => {
     }
 
     const handleSignUp = (values) =>{
-        const obj = {
-            email:values.signUpEmail,
-            password:values.signUpPassword
-        }
-        signUp(obj)
+
+           const obj = {
+               email:values.signUpEmail,
+               password:values.signUpPassword
+           }
+           signUp(obj)
+
     }
     return (
         <div className={classes.modal}>
@@ -58,8 +60,8 @@ const ModalSign:React.FC<IModalSignProps> = ({stateModal, signIn, signUp}) => {
                                       }}
                                       validateOnBlur
                                       onSubmit={(values)=> {
-                                          handleSignIn(values);
-                                          console.log(true)
+                                        handleSignIn(values)
+
 
                                       }}
                                       validationSchema ={schemaSignIn}

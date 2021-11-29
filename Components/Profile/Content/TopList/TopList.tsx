@@ -1,10 +1,13 @@
 import React from 'react';
 import ItemsList from './ItemsList/ItemsList';
 import classes from './TopList.module.scss'
-const TopList = () => {
+interface IProps{
+    book:any
+}
+const TopList:React.FC<IProps> = ({book}) => {
     return (
         <div className={classes.wrapper}>
-            <ItemsList/>
+            <ItemsList book={book}/>
         </div>
     );
 };

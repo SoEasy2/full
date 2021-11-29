@@ -5,14 +5,19 @@ import Config from '../../../../../Config';
 import PaymentForm from '../PaymentForm/PaymentForm';
 import classes from './StripeContainer.module.scss'
 const stripeTestPromise = loadStripe(Config.STRIPE_KEY)
-interface IProps{
-    data:any
+interface IStateDate{
+    startDate:string,
+    endDate:string
 }
-const StripeContainer:React.FC<IProps> = ({data}) => {
+interface IProps{
+    data:any,
+    stateForm:IStateDate
+}
+const StripeContainer:React.FC<IProps> = ({data,stateForm}) => {
 
     return (
         <Elements stripe={stripeTestPromise}>
-            <PaymentForm data={data}/>
+            <PaymentForm data={data} stateForm={stateForm}/>
         </Elements>
     );
 };

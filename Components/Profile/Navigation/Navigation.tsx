@@ -4,9 +4,9 @@ const Navigation = () => {
     return (
         <div className={classes.content}>
             <div className={classes.wrapper}>
-                <button>Dashboard</button>
-                <button>My Assets</button>
-                <button>Biddings</button>
+                <button className={`${classes.button} ${classes.active}`}>Dashboard</button>
+                <button className={classes.button}>My Assets</button>
+                <button className={classes.button}>Biddings</button>
             </div>
         </div>
     );

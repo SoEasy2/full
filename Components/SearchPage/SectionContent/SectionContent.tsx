@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import liked from "../../../public/liked.svg";
 import unLiked from "../../../public/unLiked.svg";
 import classes from "./SectionContent.module.scss"
@@ -12,7 +12,6 @@ import Favorite from '../Favorite/Favorite';
 import { checkFavourite } from '../../../http/api';
 import { IRootReducer } from '../../../redux/rootReducer/state';
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
 interface IProps{
     setFavorite(obj:Boolean):void;
     isFavorite:boolean
@@ -29,6 +28,7 @@ const SectionContent:React.FC<IProps> = ({setFavorite, isFavorite}) => {
         setFavourite([...response.data])
     }
     useEffect(()=>{
+
         if (user){
             test()
         }

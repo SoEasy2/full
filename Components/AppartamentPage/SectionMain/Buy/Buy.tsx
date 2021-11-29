@@ -48,7 +48,7 @@ const Buy:React.FC<IProps> = ({appartament}) => {
                 <button className={classes.button} onClick={()=>clickBuyHandler()}>Book Now</button>
             </div>
         </div>
-            {isOpen ? <ModalPayment setState={setOpen} data={appartament}/> :null}
+            {isOpen ? <ModalPayment stateForm={stateForm} setState={setOpen} data={appartament}/> :null}
         </>
     );
 };

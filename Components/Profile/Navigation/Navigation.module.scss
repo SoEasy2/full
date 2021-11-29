@@ -9,3 +9,18 @@
   max-width: 80%;
   margin: 0 auto;
 }
+.button{
+  border:none;
+  margin-top: 30px;
+  padding: 10px 0;
+  color:gray;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.active{
+  background-color: #e34234;
+  color:#fff;
+}
