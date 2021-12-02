@@ -8,11 +8,11 @@ import {ConfirmService} from "../confirm/confirm.service";
 import {InjectRepository} from "@nestjs/typeorm";
 import {Repository} from "typeorm";
 
-import { CreateUserDto } from 'src/user/dto/create-user.dto';
-import { UserTokenDto } from 'src/user/dto/user-token.dto';
-import { ResetPasswordDto } from 'src/user/dto/reset-password.dto';
+import { CreateUserDto } from '../user/dto/create-user.dto';
+import { UserTokenDto } from '../user/dto/user-token.dto';
+import { ResetPasswordDto } from '../user/dto/reset-password.dto';
 import { User } from 'src/user/entity/user.entity';
-import { ForgottenPasswordEntityEntity } from 'src/user/entity/ForgottenPasswordEntity.entity';
+import { ForgottenPasswordEntity } from '../user/entity/ForgottenPasswordEntity.entity';
 import { FavouriteAppartamentsEntity } from '../fauvorite-apartament/entity/fauvorite-apartament-entity.entity';
 
 @Injectable()
@@ -20,7 +20,7 @@ export class AuthService {
 
     constructor(@InjectRepository(User) private userRepository:Repository<User>,
                 private mailerService:MailService,
-                @InjectRepository(ForgottenPasswordEntityEntity) private forgottenPassword:Repository<ForgottenPasswordEntityEntity>,
+                @InjectRepository(ForgottenPasswordEntity) private forgottenPassword:Repository<ForgottenPasswordEntity>,
                 private userService:UserService,
                 private jwtService:JwtService,
                 private mailService:MailService,

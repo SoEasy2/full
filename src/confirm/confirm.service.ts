@@ -20,7 +20,6 @@ export class ConfirmService {
         return await this.confirmRepository.save(confirm)
     }
     async verifyEmail(token:string){
-        console.log(token)
         const emailVerify = await this.confirmRepository.findOne({where:{token:token}, relations:['user']})
         if (emailVerify){
             const user = await this.userRepository.findOne({where:{email:emailVerify.user.email}})

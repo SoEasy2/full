@@ -16,7 +16,7 @@ import { CheckoutModule } from './checkout/checkout.module';
 import Config from './config/config'
 import { CommentEntity } from "./comment/entity/comment.entity";
 import { User } from "./user/entity/user.entity";
-import { ForgottenPasswordEntityEntity } from "./user/entity/ForgottenPasswordEntity.entity";
+import { ForgottenPasswordEntity } from "./user/entity/ForgottenPasswordEntity.entity";
 
 import { Confirm } from "./confirm/entity/confirm.entity";
 import { FauvoriteApartamentModule } from './fauvorite-apartament/fauvorite-apartament.module';
@@ -33,7 +33,7 @@ import { BookApartamentsEntity } from "./book-apartament/entity/BookApartaments.
         username: 'postgres',
         password: 'root',
         database: 'pinktada',
-        entities: [User, CommentEntity, Confirm, ForgottenPasswordEntityEntity,BookApartamentsEntity, FavouriteAppartamentsEntity],
+        entities: [User, CommentEntity, Confirm, ForgottenPasswordEntity,BookApartamentsEntity, FavouriteAppartamentsEntity],
         synchronize: true,
     }), UserModule, CommentModule, AuthModule, MailModule, ConfirmModule,
     MongooseModule.forRoot('mongodb://localhost:27017/pinktada'),

@@ -12,7 +12,6 @@ export class MapService {
     constructor(@InjectModel('items') private pinktadaModel: Model<items>) {
     }
     async getApp(obj:ICord) {
-        console.log(obj)
         const arr = await this.pinktadaModel.find({location: {$near: {$geometry: {type:'Point', coordinates: [obj.lat, obj.lng]}, $maxDistance: obj.mapDistance}}})
         return arr;
     }
