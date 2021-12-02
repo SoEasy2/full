@@ -17,9 +17,7 @@ const Content = () => {
         const response = await getBook()
         setBook([...response.data])
     }
-
     useEffect(()=>{
-
         if(user){
          state()
         }

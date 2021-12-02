@@ -13,14 +13,11 @@ import { useCookies } from 'react-cookie';
 import ReactSession from 'react-client-session';
 import { IRootReducer } from '../../redux/rootReducer/state';
 interface IModalSignProps{
-    stateModal():void;
+    stateModal?():void;
     signIn(values:ILogin):void;
     signUp(values:ILogin):void;
 
 }
-
-
-
 const ModalSign:React.FC<IModalSignProps> = ({stateModal, signIn, signUp}) => {
 
     const user = useSelector((state:IRootReducer) => state.user)
@@ -29,7 +26,6 @@ const ModalSign:React.FC<IModalSignProps> = ({stateModal, signIn, signUp}) => {
     const handleSignIn = (values) =>{
         signIn(values)
     }
-
     const handleSignUp = (values) =>{
 
            const obj = {

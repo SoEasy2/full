@@ -54,7 +54,7 @@ const Map:React.FC<ILoginContainerProps> = ({getApp, setMap}) => {
         }
 
         map.current = L.map(mapNode,{zoomAnimation:true, markerZoomAnimation:true}).setZoom(mapData.zoom).setView(L.latLng(mapData.lat, mapData.lng))
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:20, minZoom:12}).addTo(map.current)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:20, minZoom:12, minNativeZoom:12}).addTo(map.current)
         map.current.on('moveend', (event)=>{
             const mapBoundNorthEast = event.target.getBounds().getNorthEast();
             const mapDistance = mapBoundNorthEast.distanceTo(event.target.getCenter())

@@ -3,8 +3,8 @@ import ButtonSignIn from "../ButtonSignIn/ButtonSignIn";
 import ButtonFind from "../ButtonFind/ButtonFind";
 import classes from './Header.module.scss'
 import HeaderLink from "../HeaderLink/HeaderLink";
-import { IRootReducer } from '../../../../redux/user/reducer/state';
 import { useSelector } from 'react-redux';
+import { IRootReducer } from '../../../../redux/rootReducer/state';
 
 interface IHeaderProps{
     stateModal():void;

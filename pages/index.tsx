@@ -38,12 +38,10 @@ const Home:React.FC<ILoginContainerProps> = ({signIn, signUp, checkUser}) => {
             </>
         );
 };
-const mapStateProps = (state:IRootReducer) =>({
 
-})
 const mapDispatchToProps = (dispatch:Dispatch) => ({
         signIn:(payload:ILogin) => dispatch(AuthActions.signIn(payload)),
         signUp:(payload:ILogin) => dispatch(AuthActions.signUp(payload)),
         checkUser:()=>dispatch(AuthActions.checkUser())
 })
-export default connect(mapStateProps, mapDispatchToProps)(Home);
+export default connect(null, mapDispatchToProps)(Home);
