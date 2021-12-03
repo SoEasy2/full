@@ -7,30 +7,27 @@ import { User } from './entity/user.entity';
 @ApiTags('user')
 @Controller('api/user')
 export class UserController {
-    constructor(private userController:UserService) {
+    constructor(private userService:UserService) {
     }
 
     @Get()
     @ApiOperation({summary:'Getting all users'})
     @ApiResponse({status:200, type:[User]})
-    @UseGuards(JwtAuthGuard)
-    findAll(){
-        return this.userController.findAll()
+   // @UseGuards(JwtAuthGuard)
+    async findAll(){
+        return this.userService.findAll()
     }
     @ApiOperation({summary:'User creation'})
     @ApiResponse({status:200, type:User})
     @ApiBody({type:CreateUserDto})
     @Post()
-    create(@Body() dto:CreateUserDto){
-        return this.userController.createUser(dto)
+    async create(@Body() dto:CreateUserDto){
+        return this.userService.createUser(dto)
     }
     @ApiOperation({summary:'Get user by id'})
     @ApiResponse({status:200, type:User})
     @Get(':id')
     findOne(@Param('id') id:string){
-        return this.userController.findOne(id)
+        return this.userService.findOne(id)
     }
-
-
-
 }

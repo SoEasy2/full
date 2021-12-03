@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Model } from 'mongoose';
-import { items } from 'src/map/etity/pinktada.schema';
+import { items } from '../map/etity/pinktada.schema';
 
-import { User } from 'src/user/entity/user.entity';
+import { User } from '../user/entity/user.entity';
 import { Repository } from 'typeorm';
 import * as mongoose from 'mongoose'
 import { ICheckFavouriteDto } from './dto/check-favourite.dto';

@@ -3,8 +3,8 @@ import {InjectRepository} from "@nestjs/typeorm";
 import {Repository} from "typeorm";
 import Config from "../config/config"
 import * as jwt from "jsonwebtoken"
-import { UserTokenDto } from "src/user/dto/user-token.dto";
-import { User } from "src/user/entity/user.entity";
+import { UserTokenDto } from "../user/dto/user-token.dto";
+import { User } from "../user/entity/user.entity";
 
 @Injectable()
 export class JwtService{

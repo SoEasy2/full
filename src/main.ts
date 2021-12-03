@@ -6,7 +6,7 @@ import * as cookieParser from 'cookie-parser';
 
 
 async function start() {
-  const PORT = Config.host.port || 5000;
+  const PORT = process.env.PORT || Config.host.port ;
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder().setTitle('pinktada')

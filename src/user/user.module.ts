@@ -7,9 +7,9 @@ import {AuthModule} from "../auth/auth.module";
 import {ConfirmModule} from "../confirm/confirm.module";
 
 import { MongooseModule } from '@nestjs/mongoose';
-import { ItemsSchema } from 'src/map/etity/pinktada.schema';
+import { ItemsSchema } from '../map/etity/pinktada.schema';
 import { User } from './entity/user.entity';
-import { CommentEntity } from 'src/comment/entity/comment.entity';
+import { CommentEntity } from '../comment/entity/comment.entity';
 import { FavouriteAppartamentsEntity } from '../fauvorite-apartament/entity/fauvorite-apartament-entity.entity';
 
 

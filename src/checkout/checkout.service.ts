@@ -6,9 +6,9 @@ import { Repository } from 'typeorm';
 import { ICheckoutDto } from './dto/checkout-dto';
 import { stripe } from './Stripe/stripe';
 import * as mongoose from 'mongoose'
-import { MailService } from 'src/mail/mail.service';
-import { User } from 'src/user/entity/user.entity';
-import { items } from 'src/map/etity/pinktada.schema';
+import { MailService } from '../mail/mail.service';
+import { User } from '../user/entity/user.entity';
+import { items } from '../map/etity/pinktada.schema';
 import { BookApartamentsEntity } from '../book-apartament/entity/BookApartaments.entity';
 
 

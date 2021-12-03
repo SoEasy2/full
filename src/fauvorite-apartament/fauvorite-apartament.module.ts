@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { FauvoriteApartamentService } from './fauvorite-apartament.service';
 import { FauvoriteApartamentController } from './fauvorite-apartament.controller';
-import { User } from 'src/user/entity/user.entity';
+import { User } from '../user/entity/user.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ItemsSchema } from 'src/map/etity/pinktada.schema';
+import { ItemsSchema } from '../map/etity/pinktada.schema';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FavouriteAppartamentsEntity } from './entity/fauvorite-apartament-entity.entity';
 

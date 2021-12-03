@@ -12,7 +12,7 @@ import {CreateUserDto} from './dto/create-user.dto'
 
 import {User} from './entity/user.entity';
 
-import { items } from 'src/map/etity/pinktada.schema';
+import { items } from '../map/etity/pinktada.schema';
 
 
 @Injectable()
@@ -31,6 +31,7 @@ export class UserService {
 
     async createUser(dto:CreateUserDto):Promise<User>{
         const user = await this.userRepository.save(dto)
+        console.log(user)
         return user;
     }
 

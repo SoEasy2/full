@@ -11,7 +11,7 @@ import {Repository} from "typeorm";
 import { CreateUserDto } from '../user/dto/create-user.dto';
 import { UserTokenDto } from '../user/dto/user-token.dto';
 import { ResetPasswordDto } from '../user/dto/reset-password.dto';
-import { User } from 'src/user/entity/user.entity';
+import { User } from '../user/entity/user.entity';
 import { ForgottenPasswordEntity } from '../user/entity/ForgottenPasswordEntity.entity';
 import { FavouriteAppartamentsEntity } from '../fauvorite-apartament/entity/fauvorite-apartament-entity.entity';
 

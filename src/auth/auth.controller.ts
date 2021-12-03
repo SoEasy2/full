@@ -31,11 +31,10 @@ export class AuthController {
                  @Res() response:Response){
         const {refreshToken} = request.cookies
         const temp = refreshToken.split(' ')
-        console.log(temp)
 
         const token = await this.authService.logout(temp[1])
         response.clearCookie('refreshToken')
-        console.log(true)
+
         return response.json(token)
     }
     @ApiOperation({summary:'Check user'})

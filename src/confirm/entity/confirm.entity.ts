@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
-import { User } from "src/user/entity/user.entity";
+import { User } from "../../user/entity/user.entity";
 import {Column, Entity, OneToOne, PrimaryColumn} from "typeorm";
 
 

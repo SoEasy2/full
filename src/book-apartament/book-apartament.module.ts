@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { BookApartamentService } from './book-apartament.service';
 import { BookApartamentController } from './book-apartament.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ItemsSchema } from 'src/map/etity/pinktada.schema';
+import { ItemsSchema } from '../map/etity/pinktada.schema';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from 'src/user/entity/user.entity';
+import { User } from '../user/entity/user.entity';
 import { BookApartamentsEntity } from './entity/BookApartaments.entity';
 
 @Module({

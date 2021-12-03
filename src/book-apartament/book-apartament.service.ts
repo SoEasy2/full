@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Model } from 'mongoose';
 import * as mongoose from 'mongoose'
 import { items } from '../map/etity/pinktada.schema';
-import { User } from 'src/user/entity/user.entity';
+import { User } from '../user/entity/user.entity';
 import { Repository } from 'typeorm/repository/Repository';
 import { BookApartamentsEntity } from './entity/BookApartaments.entity';
 import { InjectModel } from '@nestjs/mongoose';

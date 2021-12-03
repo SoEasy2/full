@@ -8,7 +8,7 @@ import { Confirm } from "../../confirm/entity/confirm.entity";
 import { CommentEntity } from "../../comment/entity/comment.entity";
 import { FavouriteAppartamentsEntity } from "../../fauvorite-apartament/entity/fauvorite-apartament-entity.entity";
 import { BookApartamentsEntity } from "../../book-apartament/entity/BookApartaments.entity";
-import { ConfirmSwagger } from "src/swagger/confirm-swagger";
+
 
 @Entity()
 export class User {
